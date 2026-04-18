@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --brand-primary: #00B2FF;
+  --brand-secondary: #0E1111;
+  
+  /* Text Colors */
+  --text-main: #0E1111;
+  --text-muted: #667085;
+  
+  /* Backgrounds */
+  --background: #FFFFFF;
+  --bg-surface: #F9FAFB;
+  
+  /* System */
+  --success: #22C55E;
+  --error: #EF4444;
+  --warning: #F59E0B;
+  
+  /* Borders */
+  --border-subtle: #E5E7EB;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-surface: var(--bg-surface);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-border-subtle: var(--border-subtle);
+  
+  /* Text */
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Fonts */
+  --font-sans: var(--font-montserrat), var(--font-cairo), ui-sans-serif, system-ui;
+  --font-heading: var(--font-montserrat), var(--font-cairo), ui-serif, Georgia;
+  
+  /* Radius */
+  --radius-btn: 12px;
+  --radius-card: 16px;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-main);
+  font-family: var(--font-montserrat), var(--font-cairo), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), var(--font-cairo), sans-serif;
+  font-weight: 700;
 }
