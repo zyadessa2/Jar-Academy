@@ -1,15 +1,12 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import ProcessSteps from "./components/ProcessSteps";
-import CTASection from "./components/CTASection";
+import Hero from "../components/Hero";
+import ProcessSteps from "../components/ProcessSteps";
+import CTASection from "../components/CTASection";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white selection:bg-brand-primary selection:text-white">
-      {/* Navigation */}
-      <Navbar />
-
       <main className="flex-1">
         {/* Hero Section */}
         <Hero />
@@ -26,8 +23,14 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             {/* Right: Logo */}
-            <Link href="/" className="flex items-center flex-shrink-0">
-              <img src="/jar_logo_final.png" alt="Jar Academy" style={{ width: '242px', height: '103px', objectFit: 'contain' }} />
+            <Link href="/" className="flex items-center shrink-0">
+              <Image 
+                src="/jar_logo_final.png" 
+                alt="Jar Academy" 
+                width={242} 
+                height={103} 
+                className="object-contain" 
+              />
             </Link>
 
             {/* Center: Legal Links */}
