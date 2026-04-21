@@ -32,7 +32,7 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-10">
               <Link
-                href="/join"
+                href="/get-started"
                 className="w-full sm:w-auto bg-brand-primary hover:bg-brand-primary/90 text-white font-bold text-lg px-12 py-5 rounded-btn shadow-xl shadow-brand-primary/20 transition-all hover:translate-y-[-4px] flex items-center justify-center gap-2"
               >
                 ابدأ الآن

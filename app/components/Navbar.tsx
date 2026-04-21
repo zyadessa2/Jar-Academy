@@ -32,7 +32,7 @@ const NAV_CONFIG: NavConfigType = {
     // تصميم زرار الضيف
     customActions: () => (
       <Link
-        href="/join"
+        href="/get-started"
         className="bg-brand-primary hover:bg-brand-primary/90 text-white font-bold px-6 py-2.5 rounded-btn shadow-md transition-all hover:scale-105 inline-block"
       >
         ابدأ الآن
@@ -106,10 +106,10 @@ export default function Navbar({ role = "student" }: { role?: Role }) {
       }`}
       dir="ltr"
     >
-      {/* هنا بنعكس الفليكس ليتوافق مع لغة الصفحة (RTL/LTR) واللوجو دايماً في مكانه الصحيح */}
+      {/* Container - flex with appropriate gap */}
       <div className="container mx-auto px-6 flex items-center justify-between gap-6">
         
-        {/* جزء اليمين: اللوجو */}
+        {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image 
             src="/jar_logo_final.png" 
